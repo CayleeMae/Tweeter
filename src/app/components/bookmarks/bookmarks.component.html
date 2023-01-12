@@ -1,1 +1,8 @@
-<p>bookmarks works!</p>
+<div class="bookmarks">
+    <h1 class="bookmarks_title">Bookmarks</h1>
+    <ul class="bookmarks_list" *ngFor="let bookmark of bookmarks let i = index">
+        <li>
+            {{bookmark}}
+        </li>
+    </ul>
+</div>

@@ -2,33 +2,68 @@ const express = require('express');
 const router = express.Router();
 const axios = require("axios"); //equilvant to http request
 
+let feeds = [];
+
 //Create
 router.post("/", async (req, res) => {
-    res.json({
-        hi: "post created",
-    });
+    const newTweet = {
+        name: 'CayleeMae',
+        handler: '@SunShinee',
+        title: req.body.tweet,
+        profileImg: "",
+        tweetImg: "",
+    }
+    feeds.push(newTweet);
+    res.json(feeds);
 });
 
 //Update
-router.put("/", async (req,res) => {
+router.put("/:id", async (req,res) => {
+    const { 
+        params: { id },              //destructing "grab all",pulling properties off an object. Grab this id off the request 
+        body: { tweet },             //the same as const id = req.params.id   
+    } = req; 
+
+    feeds[id] = {
+        name: 'CayleeMae',
+        handler: '@SunShinee',
+        title: req.body.tweet,
+        profileImg: "",
+        tweetImg: "",
+    }
+
     res.json({
-        hi: "post updated"
+        msg: "tweet updated",
+        data: feeds,
     });
 });
 
 //Read
 router.get("/", async (req, res) => {
-    const feeds = await axios.get(
+    const tweeterData = await axios.get(
         "https://mpb-site.s3.us-east-2.amazonaws.com/tweeter.json"
     );
-
-    res.json(feeds.data);
+    feeds = tweeterData.data;
+    res.json(tweeterData.data);
 });
 
 //Delete
-router.delete("/", async (req,res) => {
+router.delete("/:id", async (req,res) => {
+    const { 
+        params: { id },              
+        body: { tweet },             
+    } = req; 
+
+    feeds[id] = {
+        name: 'CayleeMae',
+        handler: '@SunShinee',
+        title: req.body.tweet,
+        profileImg: "",
+        tweetImg: "",
+    }
     res.json({
-        hi: "post deleted"
+        msg: "tweet deleted",
+        data: feeds,
     });
 });
 

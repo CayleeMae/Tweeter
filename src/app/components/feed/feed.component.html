@@ -143,7 +143,7 @@
                 ></path>
                 </svg>
             </div>
-            <button class="feed-container_happening_bottom_btn">Tweet</button>
+            <button (click)="createTweet()" class="feed-container_happening_bottom_btn">Tweet</button>
         </div>
     </div>
     <div *ngFor="let feed of feeds" class="feed">

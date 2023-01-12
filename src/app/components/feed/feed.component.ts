@@ -10,6 +10,8 @@ export class FeedComponent implements OnInit{
   public feeds: any[] = [];
   public showFeed = false;
   public userProfileImg = '';
+  public tweetMessage = '';
+  
   constructor(private tweeterService: TweeterService) {}
 
   ngOnInit(): void {
@@ -18,5 +20,9 @@ export class FeedComponent implements OnInit{
       this.userProfileImg = data.userProfileImg;
       this.showFeed = data.showFeed;
     })
+  }
+
+  createTweet() {
+    this.tweeterService.sendTweeterData(this.tweetMessage);
   }
 }

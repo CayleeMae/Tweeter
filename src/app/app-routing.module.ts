@@ -31,7 +31,7 @@ const routes: Routes = [
         component: MessagesComponent
       },
       {
-        path: 'bookmark',
+        path: 'bookmarks',
         component: BookmarksComponent
       },
       {

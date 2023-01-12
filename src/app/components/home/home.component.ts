@@ -49,6 +49,7 @@ export class HomeComponent implements OnInit {
   public userProfileName = '';
   public userProfileHandler = '';
   public showFeed = false;
+  public tweetMessage = '';
 
   constructor(private tweeterService: TweeterService) {}
 
@@ -67,4 +68,10 @@ export class HomeComponent implements OnInit {
       });
     });
   }
+
+  createTweet() {
+    this.tweeterService.sendTweeterData(this.tweetMessage);
+  }
 }
+
+
