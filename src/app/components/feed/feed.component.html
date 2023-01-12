@@ -1,0 +1,260 @@
+<ng-container *ngIf="showFeed" class="feed-container">
+    <div class="feed-container_happening">
+        <div class="feed-container_happening_top">
+            <div>Home</div>
+            <svg
+            width="26px"
+            height="26px"
+            stroke-width="2.17"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            color="#cccc"
+        >
+            <path
+            d="M12 2v4M12 18v4M22 12h-4M6 12H2M4.929 4.929l2.828 2.828M16.243 16.243l2.828 2.828M19.071 4.929l-2.828 2.828M7.757 16.243L4.93 19.07"
+            stroke="#ccc"
+            stroke-width="2.17"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            ></path>
+        </svg>
+        </div>
+        <div class="feed-container_happening_middle">
+            <div class="feed-container_happening_middle_img">
+                <img [src]="userProfileImg" alt="">
+            </div>
+            <input 
+            type="text"
+            placeholder="What's happening?"
+            class="feed-container_happening_middle_input"
+            >
+        </div>
+        <div class="feed-container_happening_bottom">
+            <div class="feed-container_happening_bottom_icons">
+                <svg
+                stroke-width="2.17"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                >
+                <path
+                    d="M21 3.6v16.8a.6.6 0 01-.6.6H3.6a.6.6 0 01-.6-.6V3.6a.6.6 0 01.6-.6h16.8a.6.6 0 01.6.6z"
+                    stroke-width="2.17"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                ></path>
+                <path
+                    d="M3 16l7-3 11 5M16 10a2 2 0 110-4 2 2 0 010 4z"
+                    stroke-width="2.17"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                ></path>
+                </svg>
+
+                <svg
+                viewBox="0 0 24 24"
+                stroke-width="2.17"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                >
+                <path
+                    d="M4 6V3.6a.6.6 0 01.6-.6h14.8a.6.6 0 01.6.6V6M4 18v2.4a.6.6 0 00.6.6h14.8a.6.6 0 00.6-.6V18"
+                    stroke-width="2.17"
+                    stroke-linecap="round"
+                ></path>
+                <path
+                    d="M15.5 15V9h3M15.5 12h2M12 15V9M8.5 9h-3v6h3v-2.4"
+                    stroke-width="2.17"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                ></path>
+                </svg>
+
+                <svg
+                    stroke-width="2.17"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    >
+                    <path
+                    d="M8 6h12M4 6.01l.01-.011M4 12.01l.01-.011M4 18.01l.01-.011M8 12h12M8 18h12"
+                    stroke-width="2.17"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ></path>
+                </svg>
+
+                <svg
+                stroke-width="2.17"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                >
+                <path
+                    d="M3 16V8a5 5 0 015-5h8a5 5 0 015 5v8a5 5 0 01-5 5H8a5 5 0 01-5-5z"
+                    stroke-width="2.17"
+                ></path>
+                <path
+                    d="M16.5 14.5s-1.5 2-4.5 2-4.5-2-4.5-2"
+                    stroke-width="2.17"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                ></path>
+                <path
+                    d="M8.5 10a.5.5 0 110-1 .5.5 0 010 1zM15.5 10a.5.5 0 110-1 .5.5 0 010 1z"
+                    fill="#FFD700"
+                    stroke-width="2.17"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                ></path>
+                </svg>
+
+                <svg
+                stroke-width="2.17"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                >
+                <path
+                    d="M15 4V2m0 2v2m0-2h-4.5M3 10v9a2 2 0 002 2h14a2 2 0 002-2v-9H3zM3 10V6a2 2 0 012-2h2M7 2v4M21 10V6a2 2 0 00-2-2h-.5"
+                    stroke-width="2.17"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                ></path>
+                </svg>
+
+                <svg
+                stroke-width="2.17"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                >
+                <path
+                    d="M20 10c0 4.418-8 12-8 12s-8-7.582-8-12a8 8 0 1116 0z"
+                    stroke-width="2.17"
+                ></path>
+                <path
+                    d="M12 11a1 1 0 100-2 1 1 0 000 2z"
+                    fill="#FFD700"
+                    stroke-width="2.17"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                ></path>
+                </svg>
+            </div>
+            <button class="feed-container_happening_bottom_btn">Tweet</button>
+        </div>
+    </div>
+    <div *ngFor="let feed of feeds" class="feed">
+        <div class="feed_top">
+            <div class="feed_top_profile-img">
+                <img [src]="feed?.profileImg" alt="">
+            </div>
+            <div class="feed_top_profile">
+                <div class="feed_top_profile_container">
+                    <p class="feed_top_profile_container_name">{{feed?.name}}</p>
+                    <div class="feedProfileIcon">
+                        <i class="fab fa-apple"></i>
+                    </div>
+                    <div class="feed_top_profile_container_handler">
+                        {{ feed?.handler }}
+                        <div class="feed_top_profile_container_handler_dot"></div>
+                        {{ feed?.handler | timestamp }}
+                    </div>
+                </div>
+                <div class="feed_top_profile_title">{{ feed?.title }}</div>
+            </div>
+        </div>
+        <div class="feed_bottom">
+            <div class="feed_bottom_img-container">
+                <div>#iOSDev</div>
+                <img [src]="feed?.tweetImg" alt="">
+            </div>
+            <div class="feed_bottom_icons-container">
+                <div class="feed_bottom_icons-container_icon">
+                    <svg
+                    stroke-width="1.32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                    d="M3 20.29V5a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2H7.961a2 2 0 00-1.561.75l-2.331 2.914A.6.6 0 013 20.29z"
+                    stroke-width="1.32"
+                     ></path>
+          </svg>
+          2,343
+                </div>
+                <div class="feed_bottom_icons-container_icon">
+                    <svg
+                    stroke-width="1.32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    color="#8899A6"
+                >
+                    <path
+                    d="M21.168 8A10.003 10.003 0 0012 2C6.815 2 2.55 5.947 2.05 11"
+                    stroke="#8899A6"
+                    stroke-width="1.32"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ></path>
+                    <path
+                    d="M17 8h4.4a.6.6 0 00.6-.6V3M2.881 16c1.544 3.532 5.068 6 9.168 6 5.186 0 9.45-3.947 9.951-9"
+                    stroke="#8899A6"
+                    stroke-width="1.32"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ></path>
+                    <path
+                    d="M7.05 16h-4.4a.6.6 0 00-.6.6V21"
+                    stroke="#8899A6"
+                    stroke-width="1.32"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ></path>
+                </svg>
+                3,175
+                </div>
+                <div class="feed_bottom_icons-container_icon">
+                    <svg
+                    stroke-width="1.32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    color="#8899A6"
+                >
+                    <path
+                    d="M22 8.862a5.95 5.95 0 01-1.654 4.13c-2.441 2.531-4.809 5.17-7.34 7.608-.581.55-1.502.53-2.057-.045l-7.295-7.562c-2.205-2.286-2.205-5.976 0-8.261a5.58 5.58 0 018.08 0l.266.274.265-.274A5.612 5.612 0 0116.305 3c1.52 0 2.973.624 4.04 1.732A5.95 5.95 0 0122 8.862z"
+                    stroke="#8899A6"
+                    stroke-width="1.32"
+                    stroke-linejoin="round"
+                    ></path>
+                </svg>
+                4,352
+                </div>
+                <div class="feed_bottom_icons-container_icon">
+                    <svg
+                    stroke-width="1.32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    color="#8899A6"
+                >
+                    <path
+                    d="M20 13v6a2 2 0 01-2 2H6a2 2 0 01-2-2v-6M12 15V3m0 0L8.5 6.5M12 3l3.5 3.5"
+                    stroke="#8899A6"
+                    stroke-width="1.32"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ></path>
+                </svg>
+                </div>
+                <div class="feed_bottom_icons-container_icon">
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>

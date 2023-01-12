@@ -1,0 +1,27 @@
+.messages {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 50vh;
+    position: relative;
+    gap: 2em;
+    background-color: white;
+    color: black;
+    font-size: 0.93em;
+
+    &_title {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        width: 18%;
+        margin-left: 4em;
+        left: 0;
+        font-size: 3em;
+    }
+
+    &_list {
+        display: flex;
+        flex-direction: column;
+    }
+}

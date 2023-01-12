@@ -1,0 +1,62 @@
+<div class="home">
+    <div class="home_side-nav-container">
+        <div class="home_side-nav-container_top">
+            <a
+            *ngFor="let sideNav of sideNavLinks"
+            [routerLink]="sideNav.route"
+            class="nav-link">
+                <span class="nav-icon">
+                    <i class="{{sideNav.icon}}"></i>
+                </span>      
+                {{sideNav.name}}    
+            </a>
+            <button class="home_side-nav-container_top_twt-btn">Tweet</button>
+        </div> 
+        <div class="home_side-nav-container_bottom">
+            <div class="home_side-nav-container_bottom_user">
+                <img [src]="userProfileImg" alt="">
+            </div>
+            <div class="home_side-nav-container_bottom_name">
+                <div>{{userProfileName}}</div>
+                <div class="home_side-nav-container_bottom_name_handle">
+                    {{userProfileHandler}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+    <div class="home_search">
+        <div class="home_search_input">
+            <svg
+                stroke-width="2.17"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                d="M15.5 15.5L19 19M5 11a6 6 0 1012 0 6 6 0 00-12 0z"
+                stroke-width="2.17"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ></path>
+            </svg>
+            <input type="text" placeholder="Search Twitter">
+        </div>
+        <div class="home_search_happening">
+            <h3>What's happening</h3>
+            <div class="home_search_happening_item">
+                <div class="home_search_happening_item_content">
+                    <div class="home_search_happening_item_content_title">
+                        Caylee Baylee was here
+                    </div>
+                    <div class="home_search_happening_item_content_subtitle">
+                        And so was Stone Capone!
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home_search_follow">
+            <h3>Who to follow</h3>
+        </div>
+    </div>
+</div>
